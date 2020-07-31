@@ -59,23 +59,23 @@ var names = ["John", "James", "Jason", "Jenny"];
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    const arr1 = [1, 2, 3, 4, 5]
+    var arr1 = [1, 2, 3, 4, 5]
 
 function first(x) {
         return x[0];
 }
 
-    console.log(first([1,2,3,4,5]))
+    console.log(first(arr1))
 
 function second(x) {
         return x[1]
 }
 
-    console.log(second([1,2,3,4,5]))
+    console.log(second(arr1))
 
     function last (x) {
         return x[x.length-1]
     }
 
-    console.log(last([1,2,3,4,5]))
+    console.log(last(arr1))
 })();
