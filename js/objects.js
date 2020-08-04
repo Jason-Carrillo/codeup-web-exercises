@@ -87,6 +87,8 @@
 
 
 
+
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -99,6 +101,54 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "midnight sun",
+            author: {
+                firstName: "Stephanie",
+                lastName: "Meyer"
+            }
+        },
+        {
+            title: "Live free or die",
+            author: {
+                firstName: "Sean",
+                lastName: "Hannity",
+            }
+        },
+        {
+            title: "caste",
+            author: {
+                firstName: "Isabel",
+                lastName: "Wilkerson",
+            }
+        },
+        {
+            title: "Too much and never enough",
+            author: {
+                firstName: "Mary",
+                lastName: "Trump",
+            }
+
+        },
+        {
+            title: "where the Crawdads Sing",
+            author: {
+                firstName: "Delia",
+                lastName: "Owens",
+            }
+        }
+
+
+    ];
+
+
+
+
+
+
+
 
     /**
      * TODO:
@@ -125,6 +175,23 @@
      *      ...
      */
 
+
+    function loggingBooks(books) {
+        for (var x = 0; x < books.length; x++) {
+            var book = books[x];
+
+            // console.log(book);
+            console.log("book #" + (x + 1));
+            console.log("Title" + book.title);
+            console.log("Author" + book.author.firstName + book.author.lastName);
+            console.log("---");
+        }
+    }
+
+    loggingBooks(books)
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -135,5 +202,23 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, authorFirstName, authorLastName, booksArray) {
+        var newBook = {
+            title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName,
+            }
+        }
+        booksArray.push(newBook);
+        return booksArray;
+    }
+
+    createBook("Dune", "Frank", "Herbert", books);
+
+    loggingBooks(books);
+
+
 
 })();
