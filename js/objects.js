@@ -180,15 +180,14 @@
         for (var x = 0; x < books.length; x++) {
             var book = books[x];
 
-            // console.log(book);
-            console.log("book #" + (x + 1));
-            console.log("Title" + book.title);
-            console.log("Author" + book.author.firstName + book.author.lastName);
+            console.log("book: #" + (x + 1));
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author.firstName + book.author.lastName);
             console.log("---");
         }
     }
 
-    loggingBooks(books)
+    // loggingBooks(books)
 
 
 
