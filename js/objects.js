@@ -19,8 +19,10 @@
 
     }
 
+    console.log(person)
+
     person.sayHello = function () {
-        console.log("Hello from " + person.firstName)
+        console.log("Hello from " + person.firstName + " " + person.lastName + "!")
     }
 
     console.log(person.sayHello())
@@ -65,7 +67,7 @@
 
             console.log("Name: " + shopper.name)
             console.log("Total before discount: " + shopper.amount)
-            console.log("Discount: " + (shopper.amount - finalDiscount))
+            console.log("Discount: " + (shopper.amount - finalDiscount).toFixed(2))
             console.log("Total after discount: " + finalDiscount)
 
 
@@ -76,7 +78,7 @@
 
             console.log("Name: " + shopper.name)
             console.log("Total before discount: " + shopper.amount)
-            console.log("Discount: " + (finalDiscount))
+            console.log("Discount: " + (finalDiscount).toFixed(2))
             console.log("Total after discount: " + shopper.amount)
 
         }
