@@ -29,11 +29,12 @@
      */
 
 
-    var planetsList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li>" +
-        "<li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>";
+    var planetsUl = "<ul><li>"
+    planetsUl += planetsArray.join("</li><li>")
+    planetsUl += "</li></ul>"
 
-    console.log(planetsList)
-
+    console.log(planetsUl)
+    document.write(planetsUl)
 
 
 })();

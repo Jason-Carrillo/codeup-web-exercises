@@ -12,6 +12,20 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "Jason",
+        lastName: "Carrillo",
+
+
+    }
+
+    person.sayHello = function () {
+        console.log("Hello from " + person.firstName)
+    }
+
+    console.log(person.sayHello())
+
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -36,11 +50,40 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount > 200) {
+            var discount = .12
+            var finalDiscount = shopper.amount - (shopper.amount * discount)
+
+            console.log("Name: " + shopper.name)
+            console.log("Total before discount: " + shopper.amount)
+            console.log("Discount: " + (shopper.amount - finalDiscount))
+            console.log("Total after discount: " + finalDiscount)
+
+
+
+    } else {
+
+            var finalDiscount = 0
+
+            console.log("Name: " + shopper.name)
+            console.log("Total before discount: " + shopper.amount)
+            console.log("Discount: " + (finalDiscount))
+            console.log("Total after discount: " + shopper.amount)
+
+        }
+
+    })
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
