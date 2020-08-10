@@ -11,6 +11,7 @@ h2 {
 
 
 body {
+    font-family: Helvetica;
     background-color: darkcyan;
     background-image: url("https://www.pxwall.com/wp-content/uploads/2018/06/Wallpaper%20WWDC%202018,%20White,%203D,%204K,%20Hi-Tech%20170495596.jpg");
     background-size: contain;
@@ -19,4 +20,38 @@ body {
 
 ul {
     list-style-type: square;
+}
+
+footer{
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    font-size: 30px;
+    padding: 50px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr {
+    padding: 10px;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+a:active {
+    color: black;
 }
