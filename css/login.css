@@ -1,7 +1,7 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 
 body, html {
     height: 100%;
@@ -31,7 +31,7 @@ fieldset {
 
 .width-80 {
     width: 80%;
-    position: center;
+    margin: 0 auto;
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
@@ -57,8 +57,7 @@ fieldset {
     padding: 8px;
     color: white;
     font-weight: bold;
-    border: 1px;
-    border-color: lightgray;
+    border: 1px lightgray solid;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */

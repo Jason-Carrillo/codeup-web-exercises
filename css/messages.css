@@ -1,3 +1,8 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -8,11 +13,11 @@ body, html {
 
 .message {
     padding: 10px;
-    border: 10px;
-    border-color: #666666;
+    border: 1px #666666 solid;
+
     border-radius: 5px;
-    margin: 10px;
-    width: 100%;
+    margin: 10px auto;
+    width: 90%;
 }
 
 .message-info {
