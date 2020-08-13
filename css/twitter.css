@@ -56,6 +56,17 @@ a {
     height: 80px;
 }
 
+.profile-form {
+    float: right;
+    line-height: 80px;
+
+}
+
+.profile-image {
+    position: absolute;
+    top: 15em;
+}
+
 .profile-items {
     list-style-type: none;
     padding: 0;
@@ -124,16 +135,9 @@ a {
     padding: 10px;
 }
 
-.profile-image {
-    position: absolute;
-    top: 20em;
-}
 
-.profile-form {
-    float: top;
-    line-height: 80px;
 
-}
+
 
 .img-circle {
     border-radius: 100%;
