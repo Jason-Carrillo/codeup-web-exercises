@@ -1,22 +1,37 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Ubuntu, sans-serif;
 }
 
 .top-nav {
     text-align: center;
-
+    font-weight: bold;
 }
 
 
 
 header {
     background-color: white;
+    padding: none;
     margin: 1em 0;
+}
+
+form .btn{
+    border: 1px lightblue solid;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .profile {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    align-content: center;
 }
 
 .nav {
@@ -29,6 +44,7 @@ header {
 .img-circle {
     border-radius: 50%;
     width: 3em;
+
 }
 
 #main-user {
@@ -58,8 +74,16 @@ body {
 }
 
 .timeline {
+    display: flex;
     background-color: white;
+    flex-direction: column;
 }
+
+.media {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .container {
     display: flex;
