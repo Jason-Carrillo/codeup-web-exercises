@@ -11,9 +11,17 @@
 
 
 header {
-    background-color: white;
-    padding: none;
-    margin: 1em 0;
+    display: flex;
+    background-image: url("https://picsum.photos/1200/300");
+    background-size: cover;
+    min-height: 300px;
+    flex-direction: column-reverse;
+
+}
+
+.profile {
+    background: white;
+    height: 80px;
 }
 
 form .btn{
@@ -23,10 +31,12 @@ form .btn{
     border-radius: 5px;
 }
 
+
 .profile {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em 0 .5em 0;
 }
 
 .btn {
@@ -48,8 +58,10 @@ form .btn{
 }
 
 #main-user {
+    /*position: absolute;*/
     width: 7em;
     border: 2px white solid;
+
 }
 
 .nav-item {
@@ -79,9 +91,21 @@ body {
     flex-direction: column;
 }
 
+.tweet-user {
+    margin: 0;
+}
+
 .media {
+    padding: 5px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    border-bottom: 1px lightgray solid;
+
+}
+
+.media-body {
+    justify-content: flex-start;
+    padding: 0 10px;
 }
 
 
