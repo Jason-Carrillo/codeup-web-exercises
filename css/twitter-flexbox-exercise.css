@@ -7,11 +7,33 @@
 
 }
 
+
+
+header {
+    background-color: white;
+    margin: 1em 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+
 .nav {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
 
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 3em;
+}
+
+#main-user {
+    width: 7em;
+    border: 2px white solid;
 }
 
 .nav-item {
