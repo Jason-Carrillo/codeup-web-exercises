@@ -58,10 +58,10 @@ form .btn{
 }
 
 #main-user {
-    /*position: absolute;*/
-    width: 7em;
+    width: 8em;
     border: 2px white solid;
-
+    position: relative;
+    z-index: 1;
 }
 
 .nav-item {
@@ -89,6 +89,7 @@ body {
     display: flex;
     background-color: white;
     flex-direction: column;
+    margin: 1em;
 }
 
 .tweet-user {
@@ -117,13 +118,18 @@ body {
 aside {
     margin: 1em;
     justify-content: space-between;
-    border: 1px black solid;
     background-color: white;
 }
 
 aside.profile-details {
     background-color: lightgray;
     border: none;
+
+}
+
+.who-to-follow.media {
+    display: flex;
+    flex-direction: column;
 }
 
 
