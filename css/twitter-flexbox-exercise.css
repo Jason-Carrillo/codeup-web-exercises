@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+.top-nav {
+    text-align: center;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+}
+
+.nav-item {
+    padding: 1em;
+    text-underline: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+
+body {
+    flex-direction: row;
+    background-color: lightgray;
+}
+
+.timeline {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+}
+
+
+aside {
+    margin: 1em;
+    justify-content: space-between;
+    border: 1px black solid;
+    background-color: white;
+}
+
+aside.profile-details {
+    background-color: lightgray;
+    border: none;
+}
+
+
