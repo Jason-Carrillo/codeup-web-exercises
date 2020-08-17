@@ -25,6 +25,7 @@ body {
     width: 100%;
     /* TODO: add a flex container to this selector */
     display: flex;
+    margin: auto;
 }
 
 .flex-form {
