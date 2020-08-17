@@ -3,13 +3,18 @@
 }
 
 ul {
+    display: flex;
     list-style-type: none;
+    margin: 0;
     padding: 0;
-
+    flex-direction: row;
+    font-weight: bold;
 }
 
 body {
+    padding: 0;
     margin: 0;
+
 }
 
 a {
@@ -24,10 +29,10 @@ a:hover {
 }
 
 .top-nav {
+    display: flex;
     background-color: lightgray;
-    box-sizing: border-box;
     padding: 0;
-
+    justify-content: space-between;
 }
 
 .nav {
@@ -39,23 +44,38 @@ a:hover {
 
 .nav-item {
     font-family: 'Work Sans', sans-serif;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-item:nth-of-type(4) {
-    margin-right: auto;
+/*.nav-item:nth-of-type(4) {*/
+/*    margin-right: auto;*/
 
-}
+/*}*/
 
 
 
-.nav-item:nth-of-type(5) {
+/*.nav-item:nth-of-type(5) {*/
 
-    margin-right: auto;
-    font-size: 3em;
-    padding: .2em 0;
+/*    margin-right: auto;*/
+/*    font-size: 3em;*/
+/*    padding: .2em 0;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    font-weight: normal;*/
+/*}*/
+
+/*#navlogo a {*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    padding: 0;*/
+/*}*/
+
+#navlogo {
     font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-size: 3em;
+    padding: .2em;
+
 }
 
 #navlogo a {
