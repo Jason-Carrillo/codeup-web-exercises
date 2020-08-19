@@ -49,28 +49,6 @@ a:hover {
     align-items: center;
 }
 
-/*.nav-item:nth-of-type(4) {*/
-/*    margin-right: auto;*/
-
-/*}*/
-
-
-
-/*.nav-item:nth-of-type(5) {*/
-
-/*    margin-right: auto;*/
-/*    font-size: 3em;*/
-/*    padding: .2em 0;*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*    font-weight: normal;*/
-/*}*/
-
-/*#navlogo a {*/
-/*    display: flex;*/
-/*    justify-content: space-around;*/
-/*    padding: 0;*/
-/*}*/
-
 #navlogo {
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
