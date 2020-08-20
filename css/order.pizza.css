@@ -1,0 +1,28 @@
+
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+.nav-item {
+    color: black;
+}
+
+button.btn {
+    color: black;
+    border: black 1px solid;
+    padding: 3px;
+}
+
+.form-control {
+    padding: 0;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+.navbar {
+    padding: 0 1em;
+}
