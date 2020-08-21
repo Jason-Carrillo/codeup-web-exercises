@@ -67,7 +67,7 @@
             </ul>
 
         <div class="card">
-            <div class="card-header">
+            <div class="card-header main-card-header">
                 Choose Size, and Crust
             </div>
 
@@ -75,7 +75,7 @@
                         <div class="card-header">
                             Hand Tossed
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush" id="list-hand-tossed">
                             <li class="list-group-item">Garlic Seasoned Crust with a rich, and buttery taste.</li>
                             <li class="list-group-item"><input type="radio" name="size1"> Small (10")</li>
                             <li class="list-group-item"><input type="radio" name="size1"> Medium (12")</li>
@@ -86,7 +86,7 @@
                 <div class="card-header">
                     Crispy Thin
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush" id="list-crispy-thin">
                     <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
                     <li class="list-group-item"><input type="radio" name="size1"> Medium (12")</li>
                     <li class="list-group-item"><input type="radio" name="size1"> Large (14")</li>
@@ -106,7 +106,7 @@
 
 
 <div class="card">
-    <div class="card-header">
+    <div class="card-header main-card-header">
         Choose Cheese, and Sauce
     </div>
 
@@ -167,20 +167,9 @@
 
 
     <li class="card">
-        <div class="card-header">
+        <div class="card-header main-card-header">
             Choose Toppings
         </div>
-
-<!--        <div class="card header-hand">-->
-<!--            <div class="card-header">-->
-<!--                Hand Tossed-->
-<!--            </div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--                <li class="list-group-item">Garlic Seasoned Crust with a rich, and buttery taste.</li>-->
-<!--                <li class="list-group-item"><input type="radio" name="size1"> Small (10")</li>-->
-<!--                <li class="list-group-item"><input type="radio" name="size1"> Medium (12")</li>-->
-<!--            </ul>-->
-<!--        </div>-->
 
         <div class="card header-hand">
             <div class="card-header">
@@ -190,8 +179,8 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <div class="form-check list-group-items">
-                        <input class="form-check-input" type="checkbox" value="" id="meats">
-                        <label class="form-check-label" for="meats">
+                        <input class="form-check-input" type="checkbox" value="option1" id="beef">
+                        <label class="form-check-label" for="beef">
                             Beef
                         </label>
                     </div>
@@ -199,8 +188,8 @@
 
                 <li class="list-group-item">
                     <div class="form-check list-group-items">
-                        <input class="form-check-input" type="checkbox" value="" id="meats">
-                        <label class="form-check-label" for="meats">
+                        <input class="form-check-input" type="checkbox" value="option2" id="ham">
+                        <label class="form-check-label" for="ham">
                             Ham
                         </label>
                     </div>
@@ -210,8 +199,8 @@
                 <li class="list-group-item">
 
                     <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="meats">
-                        <label class="form-check-label" for="meats">
+                        <input class="form-check-input" type="checkbox" value="option3" id="steak">
+                        <label class="form-check-label" for="steak">
                             Philly Steak
                         </label>
                     </div>
@@ -219,12 +208,10 @@
 
                 <li class="list-group-item">
                     <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="meats">
-                        <label class="form-check-label" for="meats">
+                        <input class="form-check-input" type="checkbox" value="option4" id="bacon">
+                        <label class="form-check-label" for="bacon">
                             Bacon
                         </label>
-
-
                     </div>
                 </li>
 
@@ -233,45 +220,64 @@
 
     </li>
 
-        <div class="card header-hand">
-            <div class="card-header">
-                Choose Non-Meats
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="non-meats">
-                <label class="form-check-label" for="non-meats">
+<div class="card header-hand">
+    <div class="card-header">
+        Choose Non-Meats
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="form-check list-group-items">
+                <input class="form-check-input" type="checkbox" value="option1" id="green-peppers">
+                <label class="form-check-label" for="green-peppers">
                     Green Peppers
                 </label>
             </div>
+        </li>
 
-            <hr>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="non-meats">
-                <label class="form-check-label" for="non-meats">
+        <li class="list-group-item">
+            <div class="form-check list-group-items">
+                <input class="form-check-input" type="checkbox" value="option2" id="mushrooms">
+                <label class="form-check-label" for="mushrooms">
                     Mushrooms
                 </label>
             </div>
 
-            <hr>
+        </li>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="non-meats">
-                <label class="form-check-label" for="non-meats">
+        <li class="list-group-item">
+
+            <div class="form-check list-group-item">
+                <input class="form-check-input" type="checkbox" value="option3" id="onions">
+                <label class="form-check-label" for="onions">
                     Onions
                 </label>
             </div>
+        </li>
 
-            <hr>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="non-meats">
-                <label class="form-check-label" for="non-meats">
-                    Jalapeno Peppers
+        <li class="list-group-item">
+            <div class="form-check list-group-item">
+                <input class="form-check-input" type="checkbox" value="option4" id="peppers">
+                <label class="form-check-label" for="peppers">
+                    Jalapeño Peppers
                 </label>
-            </div>
 
-        </div>
+
+            </div>
+        </li>
+
+    </ul>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-primary float-right" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Checkout <i class="fas fa-shopping-cart"></i>
+        </button>
+
+
+    </div>
+</div>
+
+</li>
 
 
 

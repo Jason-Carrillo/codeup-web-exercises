@@ -43,17 +43,16 @@ img {
     border: 1px black solid;
 }
 
-.btn {
+button.btn {
     color: white;
+    border
 }
 
 .form-group {
     padding: 0 1em;
 }
 
-hr {
-    /*margin: .5em;*/
-}
+
 
 .form-check-label {
     margin:
@@ -69,4 +68,22 @@ li {
 
 .list-group-item {
     padding: 0;
+}
+
+#list-hand-tossed li, #list-crispy-thin li{
+    padding: 1em;
+}
+
+div label {
+    padding: .5em 0;
+}
+
+.main-card-header    {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+button {
+    color: white;
 }
