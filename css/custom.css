@@ -46,3 +46,7 @@ img {
 .btn {
     color: white;
 }
+
+.form-group {
+    padding: 1em;
+}
