@@ -52,5 +52,21 @@ img {
 }
 
 hr {
-    margin: .5em;
+    /*margin: .5em;*/
+}
+
+.form-check-label {
+    margin:
+}
+
+div.form-check {
+    padding: 1em 0 1em 2em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.list-group-item {
+    padding: 0;
 }
