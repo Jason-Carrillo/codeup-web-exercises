@@ -10,9 +10,6 @@ div.container-fluid {
     background-color: white;
 }
 
-.h1background {
-
-}
 
 h1 {
     position: relative;
@@ -36,6 +33,11 @@ img {
 .jumbotron {
     padding: 0;
     margin: 0;
+    background-color: white;
+}
+
+div {
+    margin-bottom: 0;
 }
 
 .header-hand {
@@ -45,7 +47,6 @@ img {
 
 button.btn {
     color: white;
-    border
 }
 
 .form-group {
@@ -86,4 +87,8 @@ div label {
 
 button {
     color: white;
+}
+
+#zip-search, .header-button {
+    color: black;
 }
