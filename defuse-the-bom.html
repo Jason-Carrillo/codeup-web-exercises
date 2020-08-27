@@ -30,12 +30,8 @@
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-        if (defuser){
-            clearInterval(timeBomb)
             alert("Bom Stopped with " + Math.ceil(detonationTimer) + " second(s) to spare");
-        }
-
-
+            clearInterval(timeBomb)
     };
 
     // Don't modify anything below this line!
