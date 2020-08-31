@@ -15,7 +15,13 @@
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 
 
-
+mapboxgl.accessToken = mapBoxToken;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
+    center: [-96.8057, 32.7787], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
 
 
 
@@ -33,8 +39,14 @@
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Muesume on our map.
 // TODO TOGETHER: Change the color of the marker
 
+var markerOptions = {
+    color: 'pink',
+    draggable: true
+}
 
-
+var marker = new mapboxgl.Marker(markerOptions)
+    .setLngLat([-96.8084, 32.7799])
+    .addTo(map);
 
 
 
