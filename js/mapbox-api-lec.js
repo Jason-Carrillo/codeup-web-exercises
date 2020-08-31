@@ -100,26 +100,46 @@ geocode("701 Commerce St. Dallas, TX, 75202", mapBoxToken)
             center: result, // starting position [lng, lat]
             zoom: 16 // starting zoom
         });
+        //TODO: Using the geocode method above, add a marker at Codeup to the map
+        //TODO: Instead of setCenter try using map.jumpTo()
+        //TODO: Instead of setCenter try using map.flyTo()
 
         var marker = new mapboxgl.Marker()
             .setLngLat(result)
             .addTo(map);
 
+
+
+
+
+
+
+
     });
-
-
-
-
-//TODO: Using the geocode method above, add a marker at Codeup to the map
-//TODO: Instead of setCenter try using map.jumpTo()
-//TODO: Instead of setCenter try using map.flyTo()
-
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
 
 
+// reverse geocode method from mapbox-geocoder-utils.js
+reverseGeocode( {lng: -96.8084, lat: 32.7799}, mapBoxToken).then(function(results) {
+    // logs the address for The Alamo
+    console.log(results);
+
+});
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
+
+reverseGeocode( {lng: 31.776103, lat: -106.378787}, mapBoxToken).then(function(results) {
+    console.log(results);
+
+});
+
+
+
+
+
+
+
 
 
