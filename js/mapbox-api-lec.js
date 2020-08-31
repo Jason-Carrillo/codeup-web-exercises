@@ -136,7 +136,7 @@ geocode("8401 Gateway blvd w, el paso, tx, 79925", mapBoxToken)
             zoom: 16 // starting zoom
         });
 
-        var marker = new mapboxgl.Marker()
+        var marker2 = new mapboxgl.Marker()
             .setLngLat(result2)
             .addTo(map);
 
