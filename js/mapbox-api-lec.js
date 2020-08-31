@@ -110,18 +110,14 @@ geocode("701 Commerce St. Dallas, TX, 75202", mapBoxToken)
 
 
 
-
-
-
-
-
     });
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
 
 
-// reverse geocode method from mapbox-geocoder-utils.js
+// TODO reverse geocode method from mapbox-geocoder-utils.js
+
 reverseGeocode( {lng: -96.8084, lat: 32.7799}, mapBoxToken).then(function(results) {
     // logs the address for The Alamo
     console.log(results);
@@ -130,10 +126,25 @@ reverseGeocode( {lng: -96.8084, lat: 32.7799}, mapBoxToken).then(function(result
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
-reverseGeocode( {lng: 31.776103, lat: -106.378787}, mapBoxToken).then(function(results) {
-    console.log(results);
+geocode("8401 Gateway blvd w, el paso, tx, 79925", mapBoxToken)
+    .then(function(result2) {
+        console.log(result2)
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
+            center: result2, // starting position [lng, lat]
+            zoom: 16 // starting zoom
+        });
 
-});
+        var marker = new mapboxgl.Marker()
+            .setLngLat(result2)
+            .addTo(map);
+
+        reverseGeocode({lng: -106.382889, lat: 31.778016}, mapBoxToken)
+            .then(function(results2){
+                console.log(results2);
+            });
+    });
 
 
 
