@@ -20,6 +20,14 @@ geocode("el paso, tx, 79938", mapBoxTokenAPI)
                     .setLngLat(result)
                     .addTo(map);
 
+                var popupPho = new mapboxgl.Popup(marker)
+                    .setLngLat(result)
+                    .setHTML("<p>Pho Tre Bien</p>")
+                    .addTo(map)
+
+                marker.setPopup(popupPho)
+
+
             });
 
 
