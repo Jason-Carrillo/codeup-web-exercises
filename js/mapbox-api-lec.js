@@ -100,7 +100,12 @@ geocode("701 Commerce St. Dallas, TX, 75202", mapBoxToken)
             center: result, // starting position [lng, lat]
             zoom: 16 // starting zoom
         });
-});
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map);
+
+    });
 
 
 
