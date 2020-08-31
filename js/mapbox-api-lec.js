@@ -16,12 +16,12 @@
 
 
 mapboxgl.accessToken = mapBoxToken;
-// var map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
-//     center: [-96.8057, 32.7787], // starting position [lng, lat]
-//     zoom: 9 // starting zoom
-// });
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
+    center: [-96.8057, 32.7787], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
 
 
 
@@ -94,23 +94,8 @@ mapboxgl.accessToken = mapBoxToken;
 geocode("701 Commerce St. Dallas, TX, 75202", mapBoxToken)
     .then(function(result) {
         console.log(result)
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
-            center: result, // starting position [lng, lat]
-            zoom: 16 // starting zoom
         });
-        //TODO: Using the geocode method above, add a marker at Codeup to the map
-        //TODO: Instead of setCenter try using map.jumpTo()
-        //TODO: Instead of setCenter try using map.flyTo()
 
-        var marker = new mapboxgl.Marker()
-            .setLngLat(result)
-            .addTo(map);
-
-
-
-    });
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
