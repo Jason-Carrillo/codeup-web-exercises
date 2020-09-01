@@ -23,7 +23,7 @@ geocode("el paso, tx, 79938", mapBoxTokenAPI)
                 var popupPho = new mapboxgl.Popup(marker)
                     .setLngLat(result)
                     .setHTML("<p>Pho Tre Bien</p>")
-                    .addTo(map)
+                    // .addTo(map)
 
                 marker.setPopup(popupPho)
 
@@ -31,17 +31,17 @@ geocode("el paso, tx, 79938", mapBoxTokenAPI)
             });
 
         geocode("9627 Sims Dr a, El Paso, TX 79925", mapBoxTokenAPI)
-            .then(function(result) {
-                console.log(result)
+            .then(function(result2) {
+                console.log(result2)
 
                 var marker = new mapboxgl.Marker()
-                    .setLngLat(result)
+                    .setLngLat(result2)
                     .addTo(map);
 
                 var popupBam = new mapboxgl.Popup(marker)
-                    .setLngLat(result)
+                    .setLngLat(result2)
                     .setHTML("<p>Bamboo Kitchen</p>")
-                    .addTo(map)
+                    // .addTo(map)
 
                 marker.setPopup(popupBam)
 
@@ -49,17 +49,17 @@ geocode("el paso, tx, 79938", mapBoxTokenAPI)
             });
 
         geocode("1360 George Dieter Dr, El Paso, TX 79936", mapBoxTokenAPI)
-            .then(function(result) {
-                console.log(result)
+            .then(function(result3) {
+                console.log(result3)
 
                 var marker = new mapboxgl.Marker()
-                    .setLngLat(result)
+                    .setLngLat(result3)
                     .addTo(map);
 
                 var popupFam = new mapboxgl.Popup(marker)
-                    .setLngLat(result)
-                    .setHTML("<p>Bamboo Kitchen</p>")
-                    .addTo(map)
+                    .setLngLat(result3)
+                    .setHTML("<p>Famous Dave's</p>")
+                    // .addTo(map)
 
                 marker.setPopup(popupFam)
 
