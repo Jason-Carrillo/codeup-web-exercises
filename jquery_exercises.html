@@ -9,7 +9,7 @@
 <body>
 <h1 class="codeup">Hello World!</h1>
 <p class="codeup"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad deleniti ea fugiat modi reiciendis! Ad assumenda corporis, delectus eos expedita in itaque minus officiis, possimus praesentium quae quas reprehenderit vitae. </p>
-<div class="codeup">
+<div id="codeup">
     <p id="heroestitle">Favorite Comic book heroes</p>
     <ul id="heroeslist">
         <li>Batman</li>
@@ -24,16 +24,23 @@
 <script src="/js/jquery-2.2.4.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script></head>
 <script>
-        $(document).ready(function () {
-            alert("DOM has finished loading!")
-        })
 
 
-        $('.codeup').css('border', '1px solid red');
 
+
+
+
+
+
+
+        // $('.codeup').css('border', '1px solid red');
 
         // var contents = $('#heroeslist').html();
         // alert(contents);
+
+        $(document).ready(function () {
+            alert("DOM has finished loading!")
+        })
     </script>
 </body>
 
