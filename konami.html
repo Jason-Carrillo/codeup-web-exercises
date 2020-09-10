@@ -2,30 +2,42 @@
 <html>
 <head>
     <title>Konami Code</title>
-    <script src="js/jquery-2.2.4.js"></script>
 </head>
 <body>
 <h1>Konami Code</h1>
 
-<button>Submit</button>
+
+
+
+<script src="js/jquery-2.2.4.js" ></script>
 
 <script>
     "use strict";
 
-    var konamiCode = [38, 40, 38, 40, 37, 39, 37, 39, 65, 66]
-
     $(document).keyup(function(event){
-
-        var code = []
-
         console.log(event.keyCode);
-
     });
 
+    var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+    var n = 0
 
+    $(document).keydown(function (x) {
+        if (x.keyCode === konamiCode[n++]) {
+            if (n === konamiCode.length) {
+                console.log("30 Lives code entered");
+
+                n = 0
+
+                $("body").css("background-image", 'url("css/images/contra-img")')
+                alert("You have added 30 lives!");
+
+            }
+        } else {
+            n = 0;
+        }
+    });
 
 </script>
-
 
 
 </body>
