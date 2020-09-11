@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<div id="nav-text">
+    <span>X</span>
+    <h1>"Would you like to sign up for our newsletter?"</h1>
+</div>
+
 <dl>
     <dt id="question1">Question #1</dt>
     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nihil, reprehenderit. Aliquam amet at consectetur debitis doloribus fugit in laborum officia optio quo ullam, voluptates! Ad dicta id saepe tenetur.</dd>
@@ -107,6 +112,10 @@
         background-color: yellow;
     }
 
+    #nav-text {
+        border: 1px solid black;
+    }
+
 </style>
 
 <script>
@@ -191,6 +200,10 @@
         $('li').click(function(){
 
             $(this).parent().children().first().css('color', 'blue')
+        });
+
+        $('span').click(function (){
+           $('#nav-text').fadeOut(2000);
         });
 
     });
