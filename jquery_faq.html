@@ -159,9 +159,13 @@
         });
 
         $('h3').click(function (){
-            console.log(this)
 
             $(this).next().children().css('font-weight', 'bold')
+        });
+
+        $('li').click(function(){
+
+            $(this).parent().children().first().css('color', 'blue')
         });
 
     });
