@@ -116,6 +116,10 @@
         border: 1px solid black;
     }
 
+    ul {
+        display: none;
+    }
+
 </style>
 
 <script>
@@ -204,6 +208,10 @@
 
         $('span').click(function (){
            $('#nav-text').fadeOut(2000);
+        });
+
+        $('h3').click(function (){
+            $(this).next().fadeToggle(2000);
         });
 
     });
