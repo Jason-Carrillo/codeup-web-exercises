@@ -13,7 +13,10 @@
     <h1>"Would you like to sign up for our newsletter?"</h1>
 </div>
 
-<h2>would you like to register for the site!</h2>
+<div id="register-alert">
+    <span>X</span>
+    <h2>would you like to register for the site?</h2>
+</div>
 
 <dl>
     <dt id="question1">Question #1</dt>
@@ -122,7 +125,7 @@
         display: none;
     }
 
-    h2 {
+    #register-alert {
         display: none;
     }
 
@@ -213,7 +216,7 @@
         });
 
         $('span').click(function (){
-           $('#nav-text').fadeOut(2000);
+           $(this).parent().fadeOut(1000);
         });
 
         $('h3').click(function (){
@@ -222,9 +225,11 @@
 
         setTimeout(
             function() {
-                $('h2').fadeIn()
+                $('#register-alert').fadeIn()
 
             },8000);
+
+
 
 
     });
