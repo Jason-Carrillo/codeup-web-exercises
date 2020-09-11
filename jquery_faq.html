@@ -43,20 +43,29 @@
 
 <button id="toggle-button" type="submit">Toggle Visibility</button>
 
-<h3>First Park</h3>
+<h3>Yellowstone National Park</h3>
 <ul>
-    <li>Yellowstone National Park</li>
+    <li>Fact #1</li>
+    <li>Fact #2</li>
+    <li>Fact #3</li>
+    <li>Fact #4</li>
 </ul>
 
 
-<h3>Second Park</h3>
+<h3>Antelope Island</h3>
 <ul>
-    <li>Antelope Island</li>
+    <li>Fact #1</li>
+    <li>Fact #2</li>
+    <li>Fact #3</li>
+    <li>Fact #4</li>
 </ul>
 
-<h3>Third Park</h3>
+<h3>Hot Springs National Park</h3>
 <ul>
-    <li>Hot Springs National Park</li>
+    <li>Fact #1</li>
+    <li>Fact #2</li>
+    <li>Fact #3</li>
+    <li>Fact #4</li>
 </ul>
 
 <button id="button-highlight-last" >Highlight last li</button>
@@ -137,6 +146,16 @@
             event.preventDefault()
 
             $('#question10').toggleClass('yellow')
+        });
+
+        $('#button-highlight-last').click(function(event){
+            event.preventDefault()
+
+            $('ul').each(function(index, element){
+                if(index % 1 === 0) {
+                    $(element).children().last().addClass('yellow')
+                }
+            })
         });
     });
 
