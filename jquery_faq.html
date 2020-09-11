@@ -41,13 +41,31 @@
 
 </dl>
 
-<button type="submit">Toggle Visibility</button>
+<button id="toggle-button" type="submit">Toggle Visibility</button>
+
+<style>
+
+    .invisible {
+        visibility: hidden;
+    }
+</style>
 
 <script>
-    $(document).ready(function(){
-       $('dd').addClass('invisible');
+    "use strict";
 
-       $('.invisible').css('visibility', 'hidden');
+    $(document).ready(function(){
+
+        $('dd').addClass('invisible');
+
+        // $('.invisible').css('visibility', 'hidden');
+
+        $('#toggle-button').click(function(event){
+            event.preventDefault();
+
+            $('dd').toggleClass('invisible');
+
+        });
+
 
 
     });
