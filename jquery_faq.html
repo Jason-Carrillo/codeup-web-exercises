@@ -153,10 +153,17 @@
 
             $('ul').each(function(index, element){
                 if(index % 1 === 0) {
-                    $(element).children().last().addClass('yellow')
+                    $(element).children().last().css('background-color', 'yellow')
                 }
             })
         });
+
+        $('h3').click(function (){
+            console.log(this)
+
+            $(this).next().children().css('font-weight', 'bold')
+        });
+
     });
 
 
