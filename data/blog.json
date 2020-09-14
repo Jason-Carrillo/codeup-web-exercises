@@ -16,5 +16,16 @@
             "sugar"
         ],
         "date": "February 14, 2015"
-    }
+    }, {
+    "title": "The Third Post",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, consequuntur delectus et expedita impedit minima minus quo veniam vero? Ducimus eligendi ex nam soluta vitae. Maiores nemo quibusdam quo vel?",
+    "categories": [
+        "put",
+        "random",
+        "words",
+        "here"
+    ],
+    "date": "September 14, 2020"
+}
+
 ]
