@@ -7,9 +7,7 @@
 
 <h1>My Tool Store</h1>
 
-<button id="refresh" value="refresh">Refresh</button>
-
-<table id="products">
+<table id="products" class="table table-striped table-dark">
     <thead>
         <tr>
             <th>Title</th>
@@ -21,38 +19,27 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="refresh">Refresh</button>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="data/inventory.json" ></script>
 <script>
+
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
-    $.get("data/inventory.json").done(function (data) {
-        insert.empty()
-        var finalTbody = "";
-
-        for (var i = 0; i < data.length; i++) {
-            finalTbody +=
-                "<tr>" +
-                "<td>" + data[i].title + "</td>" +
-                "<td>" + data[i].quantity + "</td>" +
-                "<td>" + data[i].price + "</td>" +
-                "<td>" + data[i].categories + "</td>" +
-                "</tr>"
-        }
-        $("#insertProducts").append(finalTbody)
-
-    });
-
     var insert = $("#insertProducts")
-    function inventory() {
-        $.get("data/inventory.json").done(function (data) {
-            insert.empty()
-            var finalTbody = "";
 
+
+    function inventory () {
+        $.get("data/inventory.json").done(function (data) {
+            var newTbody = "";
+            insert.empty()
             for (var i = 0; i < data.length; i++) {
-                finalTbody +=
+                newTbody +=
                     "<tr>" +
                     "<td>" + data[i].title + "</td>" +
                     "<td>" + data[i].quantity + "</td>" +
@@ -60,30 +47,18 @@
                     "<td>" + data[i].categories + "</td>" +
                     "</tr>"
             }
-            $("#insertProducts").append(finalTbody)
+            $("#insertProducts").append(newTbody)
 
         });
     };
 
-    $("#refresh").click(inventory);
+    inventory();
 
-    // $("#refresh").click( function(){
-    // $.get("data/inventory.json").done(function (data){
-    //     var finalTbody = "";
-    //
-    //     for (var i = 0; i < data.length; i++){
-    //         finalTbody +=
-    //             "<tr>"+
-    //             "<td>"+ data[i].title + "</td>" +
-    //             "<td>"+ data[i].quantity + "</td>" +
-    //             "<td>"+ data[i].price + "</td>" +
-    //             "<td>"+ data[i].categories + "</td>" +
-    //             "</tr>"
-    //     }
-    //     $("#insertProducts").append(finalTbody)
-    // });
 
-    // });
+    var refreshButton = $("#refresh")
+    refreshButton(function () {
+        inventory();
+    });
 
 
 
@@ -93,6 +68,10 @@
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
