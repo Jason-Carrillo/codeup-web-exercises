@@ -28,21 +28,62 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
-    $.get("data/inventory.json").done(function (data){
+    $.get("data/inventory.json").done(function (data) {
+        insert.empty()
         var finalTbody = "";
 
-        for (var i = 0; i < data.length; i++){
+        for (var i = 0; i < data.length; i++) {
             finalTbody +=
-                "<tr>"+
-                "<td>"+ data[i].title + "</td>" +
-                "<td>"+ data[i].quantity + "</td>" +
-                "<td>"+ data[i].price + "</td>" +
-                "<td>"+ data[i].categories + "</td>" +
+                "<tr>" +
+                "<td>" + data[i].title + "</td>" +
+                "<td>" + data[i].quantity + "</td>" +
+                "<td>" + data[i].price + "</td>" +
+                "<td>" + data[i].categories + "</td>" +
                 "</tr>"
         }
         $("#insertProducts").append(finalTbody)
 
     });
+
+    var insert = $("#insertProducts")
+    function inventory() {
+        $.get("data/inventory.json").done(function (data) {
+            insert.empty()
+            var finalTbody = "";
+
+            for (var i = 0; i < data.length; i++) {
+                finalTbody +=
+                    "<tr>" +
+                    "<td>" + data[i].title + "</td>" +
+                    "<td>" + data[i].quantity + "</td>" +
+                    "<td>" + data[i].price + "</td>" +
+                    "<td>" + data[i].categories + "</td>" +
+                    "</tr>"
+            }
+            $("#insertProducts").append(finalTbody)
+
+        });
+    };
+
+    $("#refresh").click(inventory);
+
+    // $("#refresh").click( function(){
+    // $.get("data/inventory.json").done(function (data){
+    //     var finalTbody = "";
+    //
+    //     for (var i = 0; i < data.length; i++){
+    //         finalTbody +=
+    //             "<tr>"+
+    //             "<td>"+ data[i].title + "</td>" +
+    //             "<td>"+ data[i].quantity + "</td>" +
+    //             "<td>"+ data[i].price + "</td>" +
+    //             "<td>"+ data[i].categories + "</td>" +
+    //             "</tr>"
+    //     }
+    //     $("#insertProducts").append(finalTbody)
+    // });
+
+    // });
 
 
 
