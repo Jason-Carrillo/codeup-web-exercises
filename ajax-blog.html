@@ -12,9 +12,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="col-12 container-fluid">
 
-<div id="posts">
+<div id="posts" class="row">
 
 </div>
 
@@ -26,8 +26,6 @@
         "use strict";
 
 
-        var newPost = $("#posts")
-
 
         function blogPost() {
             $.get("data/blog.json").done(function (data){
@@ -37,10 +35,12 @@
                 for (var i = 0; i < data.length; i++){
 
                newBlog +=
-                   "<h1>" + data[i].title + "</h1>" +
-                   "<div>" + data[i].content + "</div>" +
-                   "<div>" + data[i].categories + "</div>" +
-                   "<div>" + data[i].date + "</div>"
+                   "<div class=''>" +
+                    "<h1 class='card'>" + data[i].title + "</h1>" +
+                       "<div class='card-title'>" + data[i].content + "</div>" +
+                       "<div class='card-body'>" + data[i].categories + "</div>" +
+                       "<div class='card-body'>" + data[i].date + "</div>" +
+                   "<div>"
            }
 
            $("#posts").append(newBlog);

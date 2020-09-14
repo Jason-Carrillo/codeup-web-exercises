@@ -26,6 +26,16 @@
         "here"
     ],
     "date": "September 14, 2020"
+}, {
+    "title": "The Fourth Post",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, consequuntur delectus et expedita impedit minima minus quo veniam vero? Ducimus eligendi ex nam soluta vitae. Maiores nemo quibusdam quo vel?",
+    "categories": [
+        "more",
+        "random",
+        "words",
+        "here"
+    ],
+    "date": "September 15, 2020"
 }
 
 ]
