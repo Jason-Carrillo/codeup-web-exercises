@@ -34,7 +34,7 @@
 
                 var newBlog = "";
 
-                for (var i = 0; 1 < data.length; i++){
+                for (var i = 0; i < data.length; i++){
 
                newBlog +=
                    "<h1>" + data[i].title + "</h1>" +
@@ -43,7 +43,7 @@
                    "<div>" + data[i].date + "</div>"
            }
 
-           newPost.append(newBlog);
+           $("#posts").append(newBlog);
         });
     };
 
