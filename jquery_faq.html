@@ -224,11 +224,7 @@
             $(this).next().fadeToggle(2000);
         });
 
-        setTimeout(
-            function() {
-                $('#register-alert').fadeIn()
-
-            },8000);
+        $('#register-alert').delay(8000).fadeIn()
 
 
     });
