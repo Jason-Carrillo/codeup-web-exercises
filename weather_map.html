@@ -13,7 +13,10 @@
 </head>
 <body>
 
-<div id="weather" >
+<input id="box-city-search" placeholder="Enter City">
+<button id="button-city-search">Search</button>
+
+<div id="weather">
 
 </div>
 
@@ -35,8 +38,8 @@
         console.log(data)
         console.log(data.city.name)
         console.log(data.list[0].main)
-        console.log(data.list[8].main.temp)
-        console.log(data.list[8].main.temp_max)
+        console.log(data.list[0].main.temp)
+        console.log(data.list[0].main.temp_max)
 
         for(i = 0; i < data.list.length; i+= 8) {
 
@@ -48,12 +51,38 @@
                 "</div>"
 
             $("#weather").append(thisCity)
+
         }
 
 
-
-
         });
+
+
+
+
+    function searchCity () {
+        var searchCityName = $("#box-city-search").html()
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            "APPID": weatherAPI,
+            "q": $("#box-city-search").val(),
+            "units": "imperial"
+        }).done(function (data) {
+
+            for (i = 0; i < data.list.length; i += 8) {
+
+                var thisCity =
+                    "<div>" +
+                    "<h1>City: " + data.city.name + "</h1>" +
+                    "<h3>Temperature: " + data.list[i].main.temp + "</h3>" +
+                    "<h5> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                    "</div>"
+
+                $("#weather").append(thisCity)
+            }
+        })
+    };
+
+    $("#button-city-search").click(searchCity)
 
 
 
