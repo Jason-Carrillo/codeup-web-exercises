@@ -61,14 +61,18 @@
 
 
     function searchCity () {
-        var searchCityName = $("#box-city-search").html()
+
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             "APPID": weatherAPI,
             "q": $("#box-city-search").val(),
             "units": "imperial"
         }).done(function (data) {
 
+            $("#weather").empty()
+
             for (i = 0; i < data.list.length; i += 8) {
+
+
 
                 var thisCity =
                     "<div>" +
