@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
     <script src="js/keys.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -44,10 +45,13 @@
         for(i = 0; i < data.list.length; i+= 8) {
 
             var thisCity =
-                "<div>" +
-                "<h1>City: " + data.city.name + "</h1>" +
-                "<h3>Temperature: " + data.list[i].main.temp + "</h3>" +
-                "<h5> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                "<div class='card bg-dark text-white'>" +
+                    "<img class='card-img' src='css/images/sun.png' alt='Card Image' " +
+                    "<div class='card-img-overlay'>" +
+                        "<h1 class='card-title'>City: " + data.city.name + "</h1>" +
+                        "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
+                        "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                    "</div>" +
                 "</div>"
 
             $("#weather").append(thisCity)
@@ -75,16 +79,19 @@
 
 
                 var thisCity =
-                    "<div>" +
-                    "<h1>City: " + data.city.name + "</h1>" +
-                    "<h3>Temperature: " + data.list[i].main.temp + "</h3>" +
-                    "<h5> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                    "<div class='card bg-dark text-white'>" +
+                        "<img class='card-img' src='css/images/sun.png' alt='Card Image' " +
+                        "<div class='card-img-overlay'>" +
+                            "<h1 class='card-title'>City: " + data.city.name + "</h1>" +
+                            "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
+                            "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                        "</div>" +
                     "</div>"
-
                 $("#weather").append(thisCity)
             }
         })
     };
+
 
     $("#button-city-search").click(searchCity)
 
