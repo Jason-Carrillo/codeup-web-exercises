@@ -34,11 +34,14 @@
     var insert = $("#insertProducts")
 
 
-    function inventory () {
+    inventory();
+
+    function inventory() {
         $.get("data/inventory.json").done(function (data) {
             var newTbody = "";
-            insert.empty()
+
             for (var i = 0; i < data.length; i++) {
+                insert.empty()
                 newTbody +=
                     "<tr>" +
                     "<td>" + data[i].title + "</td>" +
@@ -52,13 +55,12 @@
         });
     };
 
-    inventory();
 
-
-    var refreshButton = $("#refresh")
-    refreshButton(function () {
+    $("refresh").click(function (){
         inventory();
     });
+
+
 
 
 
