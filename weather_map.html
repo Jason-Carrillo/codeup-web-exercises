@@ -25,7 +25,7 @@
 </div>
 
 
-<div id='map' style='width: 100%; height: 200px;'>
+<div id='map' style='width: 100%; height: 250px;'>
 
 </div>
 
@@ -36,6 +36,7 @@
 
 <script>
     (function (){
+
 
 
 
@@ -76,10 +77,11 @@
 
 
     function searchCity () {
+        var typedCitySearch = $("#box-city-search").val()
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             "APPID": weatherAPI,
-            "q": $("#box-city-search").val(),
+            "q": typedCitySearch,
             "units": "imperial"
         }).done(function (data) {
 
@@ -108,9 +110,62 @@
 
 
 
+        geocode("El Paso", mapBoxTokenAPI)
+            .then(function(result) {
+                console.log(result)
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
+                    center: result, // starting position [lng, lat]
+                    zoom: 10 // starting zoom
+                });
+
+            });
+
+
+
+
+
+        mapboxgl.accessToken = mapBoxToken;
+
+        var typedCitySearch = $("#box-city-search").val()
+
+        function searchMap (){
+
+            var typedCitySearch = $("#box-city-search").val()
+
+        geocode(typedCitySearch, mapBoxTokenAPI)
+            .then(function(result) {
+                console.log(result)
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
+                    center: result, // starting position [lng, lat]
+                    zoom: 10 // starting zoom
+                });
+
+            });
+
+        };
+
+
+
+        $("#button-city-search").click(searchMap)
+
 
 
     })();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
