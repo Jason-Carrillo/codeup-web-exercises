@@ -97,7 +97,7 @@
                         "<div class='card-img-overlay'>" +
                             "<h2 class='card-title'>City: " + data.city.name + "</h2>" +
                             "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
-                            "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                            "<h6 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h6>" +
                         "</div>" +
                     "</div>"
                 $("#weather").append(thisCity)
@@ -128,8 +128,6 @@
 
         mapboxgl.accessToken = mapBoxToken;
 
-        var typedCitySearch = $("#box-city-search").val()
-
         function searchMap (){
 
             var typedCitySearch = $("#box-city-search").val()
@@ -141,7 +139,7 @@
                     container: 'map',
                     style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
                     center: result, // starting position [lng, lat]
-                    zoom: 10 // starting zoom
+                    zoom: 8 // starting zoom
                 });
 
             });
