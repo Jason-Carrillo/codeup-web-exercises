@@ -55,16 +55,13 @@
 
         for(i = 0; i < data.list.length; i+= 8) {
 
-
-            //TODO: Make the images smaller, they are huge.
-
             var thisCity =
                 "<div class='card bg-dark text-white'>" +
                     "<img class='card-img'" +
                     "<div class='card-img-overlay'>" +
                         "<h2 class='card-title'>City: " + data.city.name + "</h2>" +
-                        "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
-                        "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
+                        "<h3 class='card-text'>Temperature: " + Math.round(data.list[i].main.temp) + " °F</h3>" +
+                        "<h5 class='card-text'> Max Temperature: " + Math.round(data.list[i].main.temp_max) + " °F</h5>" +
                     "</div>" +
                 "</div>"
 
@@ -98,8 +95,8 @@
                         "<img class='card-img'" +
                         "<div class='card-img-overlay'>" +
                             "<h2 class='card-title'>City: " + data.city.name + "</h2>" +
-                            "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
-                            "<h6 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h6>" +
+                            "<h3 class='card-text'>Temperature: " + Math.round(data.list[i].main.temp) + " °F</h3>" +
+                            "<h6 class='card-text'> Max Temperature: " + Math.round(data.list[i].main.temp_max) + " °F</h6>" +
                         "</div>" +
                     "</div>"
                 $("#weather").append(thisCity)
@@ -119,7 +116,7 @@
                     container: 'map',
                     style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
                     center: result, // starting position [lng, lat]
-                    zoom: 10 // starting zoom
+                    zoom:10 // starting zoom
                 });
 
                 var marker = new mapboxgl.Marker()
@@ -145,7 +142,7 @@
                     container: 'map',
                     style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
                     center: result, // starting position [lng, lat]
-                    zoom: 8 // starting zoom
+                    zoom: 10 // starting zoom
 
                 });
 
