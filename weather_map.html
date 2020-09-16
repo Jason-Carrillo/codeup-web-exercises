@@ -16,9 +16,11 @@
 
 </head>
 <body>
+<div class="text-center">
+    <input id="box-city-search" placeholder="Enter City">
+    <button id="button-city-search">Search</button>
+</div>
 
-<input id="box-city-search" placeholder="Enter City">
-<button id="button-city-search">Search</button>
 
 <div id="weather" class="card-group">
 
@@ -101,8 +103,8 @@
                         "</div>" +
                     "</div>"
                 $("#weather").append(thisCity)
-            }
-        })
+            };
+        });
     };
 
 
@@ -119,6 +121,10 @@
                     center: result, // starting position [lng, lat]
                     zoom: 10 // starting zoom
                 });
+
+                var marker = new mapboxgl.Marker()
+                    .setLngLat([12.550343, 55.665957])
+                    .addTo(map);
 
             });
 
@@ -140,11 +146,14 @@
                     style: 'mapbox://styles/mapbox/navigation-guidance-night-v4', // stylesheet location
                     center: result, // starting position [lng, lat]
                     zoom: 8 // starting zoom
+
                 });
 
             });
 
         };
+
+
 
 
 
