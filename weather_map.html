@@ -8,7 +8,10 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/mapbox-geocoder-utils.js" ></script>
+    <script src="js/weather-map-box.js" ></script>
 
 
 </head>
@@ -17,7 +20,12 @@
 <input id="box-city-search" placeholder="Enter City">
 <button id="button-city-search">Search</button>
 
-<div id="weather">
+<div id="weather" class="card-group">
+
+</div>
+
+
+<div id='map' style='width: 100%; height: 200px;'>
 
 </div>
 
@@ -49,9 +57,9 @@
 
             var thisCity =
                 "<div class='card bg-dark text-white'>" +
-                    "<img class='card-img' src='css/images/sun.png' alt='Card Image' " +
+                    "<img class='card-img'" +
                     "<div class='card-img-overlay'>" +
-                        "<h1 class='card-title'>City: " + data.city.name + "</h1>" +
+                        "<h2 class='card-title'>City: " + data.city.name + "</h2>" +
                         "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
                         "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
                     "</div>" +
@@ -82,10 +90,10 @@
 
 
                 var thisCity =
-                    "<div class='card bg-dark text-white'>" +
-                        "<img class='card-img' src='css/images/sun.png' alt='Card Image' " +
+                    "<div class='card bg-dark text-white '>" +
+                        "<img class='card-img'" +
                         "<div class='card-img-overlay'>" +
-                            "<h1 class='card-title'>City: " + data.city.name + "</h1>" +
+                            "<h2 class='card-title'>City: " + data.city.name + "</h2>" +
                             "<h3 class='card-text'>Temperature: " + data.list[i].main.temp + "</h3>" +
                             "<h5 class='card-text'> Max Temperature: " + data.list[i].main.temp_max + "</h5>" +
                         "</div>" +
