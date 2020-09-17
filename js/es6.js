@@ -78,6 +78,10 @@ users.forEach(function(user) {
   const email = user.email;
   const languages = user.languages;
 
+  const person = {name: user.name, email: user.email, languages: user.languages};
+  const {name, email, languages} = person;
+
+
   // TODO: rewrite the assignment below to use template strings
   developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 });
