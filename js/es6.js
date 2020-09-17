@@ -86,6 +86,9 @@ users.forEach(function(user) {
   developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 });
 
+developers.push('${name} email is ${email} ${name} knows ${languages}');
+
+
 // TODO: Use `let` for the following variable
 var list = '<ul>';
 
