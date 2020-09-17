@@ -44,6 +44,14 @@ users.push({
   languages: languages
 });
 
+const person = {
+  name,
+  email,
+  languages
+}
+
+
+
 // TODO: replace `var` with `let` in the following variable declarations
 var emails = [];
 var names = [];
