@@ -64,6 +64,10 @@ users.forEach(function(user) {
   return names.push(user.name);
 });
 
+const newEmails = email => emails.push(users.email)
+
+const newNames = name => names.push(users.name)
+
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
 users.forEach(function(user) {
