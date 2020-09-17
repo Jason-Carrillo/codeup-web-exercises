@@ -90,7 +90,7 @@ developers.push('${name} email is ${email} ${name} knows ${languages}');
 
 
 // TODO: Use `let` for the following variable
-var list = '<ul>';
+let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 developers.forEach(function (developer) {
