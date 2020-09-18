@@ -51,3 +51,22 @@ let averageYears = users.reduce((accumulation, user) => {
 
 
 console.log(averageYears/users.length);
+
+let longestEmail = users.reduce((long, user) => {
+
+    if(user.email.length > long.length){
+        long = long[user].email
+    }
+    console.log(user.email + user.email.length)
+    return long
+
+}, {});
+
+console.log(longestEmail)
+
+let userNames = users.reduce((account, name)=> {
+    return account + name.name + " "
+
+}, "");
+
+console.log(userNames.split());
