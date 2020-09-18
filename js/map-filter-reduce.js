@@ -40,4 +40,6 @@ let languageUsers = users.filter((user) => user.languages.length > 2);
 
 console.log(languageUsers)
 
+let emailUsers = users.map((user) => user.email)
 
+console.log(emailUsers);
