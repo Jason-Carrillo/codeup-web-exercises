@@ -64,9 +64,15 @@ let longestEmail = users.reduce((acc, user) => {
 
 console.log(longestEmail)
 
-let userNames = users.reduce((account, name)=> {
-    return account + name.name + " "
-
+let userNames = users.reduce((account, name, index, array)=> {
+    if (index === 0){
+        return name.name;
+    } else if (index === array.length - 1 ){
+        return account + ", and " + name.name;
+    } else {
+        return account + ", " + name.name;
+    }
 }, "");
 
-console.log(userNames.split());
+console.log(userNames);
+console.log(userNames.length);
