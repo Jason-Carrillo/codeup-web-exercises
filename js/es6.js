@@ -27,11 +27,6 @@ const users = [
     email: 'justin@codeup.com',
     languages: ['html', 'css', 'javascript', 'php']
   },
-  {
-    name: 'Jason Carrillo',
-    email: 'jason.carrillo182@gmail.com',
-    languages: [JavaScript, HTML, CSS]
-  }
 
 ];
 
@@ -45,9 +40,9 @@ const languages = [JavaScript, HTML, CSS];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-  name: name,
-  email: email,
-  languages: languages
+  name,
+  email,
+  languages
 });
 
 const person = {
@@ -63,16 +58,16 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-  return emails.push(user.email);
-});
-users.forEach(function(user) {
-  return names.push(user.name);
-});
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
 
-const newEmails = email => emails.push(users.email)
+users.forEach(user => emails.push(user.email));
 
-const newNames = name => names.push(users.name)
+users.forEach(user => names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
