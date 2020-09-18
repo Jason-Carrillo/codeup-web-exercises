@@ -43,3 +43,11 @@ console.log(languageUsers)
 let emailUsers = users.map((user) => user.email)
 
 console.log(emailUsers);
+
+let averageYears = users.reduce((accumulation, user) => {
+   let totalYears = user.yearsOfExperience + accumulation
+    return totalYears
+}, 0);
+
+
+console.log(averageYears/users.length);
