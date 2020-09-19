@@ -75,4 +75,3 @@ let userNames = users.reduce((account, name, index, array)=> {
 }, "");
 
 console.log(userNames);
-console.log(userNames.length);
