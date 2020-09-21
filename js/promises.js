@@ -1,6 +1,26 @@
-const githubID = fetch('https://api.github.com/users', {headers: {'Authorization': githubAPI}});
+function gitData(url) {
+    return fetch(url,
+        {headers: {'Authorization': githubAPI}})
+        .then(response => response.json());
+}
 
-githubID.then(response => response.json().then(data => console.log(data))
-)
+function lastCommit(name){
+gitData(`https://api.github.com/users/${name}/events`)
+    .then(data => {
+        return data;
+    })
+    .then(data => {
+        console.log(data);
+        let i = 0;
 
+        while (i < data.length) {
+            if (data[i].type === "PushEvent") {
+                break;
+            }
+            i++;
+        }
+        console.log(data[i].created_at);
+    });
+}
 
+console.log(lastCommit("Jason-Carrillo"))
