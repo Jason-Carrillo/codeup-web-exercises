@@ -14,6 +14,7 @@ gitData(`https://api.github.com/users/${name}/events`)
 
         for (i = 0; i < data.length; i++) {
             if (data[i].type === "PushEvent") {
+                console.log(data.length);
                 break;
             }
         }
