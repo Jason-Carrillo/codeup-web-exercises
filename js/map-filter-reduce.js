@@ -75,3 +75,13 @@ let userNames = users.reduce((account, name, index, array)=> {
 }, "");
 
 console.log(userNames);
+
+let allLanguages = users.reduce((languages, user) => {
+    user.languages.forEach((language) => {
+        if (!languages.includes()) {
+            languages.push(language);
+        }
+    });
+}, []);
+
+console.log(allLanguages);
