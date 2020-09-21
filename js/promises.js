@@ -11,13 +11,11 @@ gitData(`https://api.github.com/users/${name}/events`)
     })
     .then(data => {
         console.log(data);
-        let i = 0;
 
-        while (i < data.length) {
+        for (i = 0; i < data.length; i++) {
             if (data[i].type === "PushEvent") {
                 break;
             }
-            i++;
         }
         console.log(data[i].created_at);
     });
