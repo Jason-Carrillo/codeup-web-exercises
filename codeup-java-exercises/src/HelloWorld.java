@@ -11,7 +11,7 @@ public class HelloWorld {
 
         System.out.println(myString);
 
-        long myNumber;
+        long myNumber = 123L;
 
         System.out.println(myNumber);
 
