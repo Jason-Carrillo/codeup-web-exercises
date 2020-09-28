@@ -6,5 +6,10 @@ public class HelloWorld {
         int myFavoriteNumber = 7;
 
         System.out.println(myFavoriteNumber);
+
+        String myString = "Texas";
+
+        System.out.println(myString);
+
     }
 }
