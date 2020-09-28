@@ -11,5 +11,9 @@ public class HelloWorld {
 
         System.out.println(myString);
 
+        long myNumber;
+
+        System.out.println(myNumber);
+
     }
 }
