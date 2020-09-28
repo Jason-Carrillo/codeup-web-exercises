@@ -28,5 +28,13 @@ public class HelloWorld {
         b *= a;
 
         System.out.println(b);
+
+        int c = 10;
+        int d = 2;
+
+        c /= d;
+        d -= c;
+
+        System.out.println(d);
     }
 }
