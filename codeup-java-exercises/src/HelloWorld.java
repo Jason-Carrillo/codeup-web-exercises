@@ -7,7 +7,7 @@ public class HelloWorld {
 
         System.out.println(myFavoriteNumber);
 
-        String myString = "Texas";
+        String myString = "T";
 
         System.out.println(myString);
 
