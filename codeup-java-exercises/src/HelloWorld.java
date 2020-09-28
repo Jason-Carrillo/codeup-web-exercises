@@ -19,5 +19,7 @@ public class HelloWorld {
         System.out.println(++x);
         System.out.println(x);
 
+        class = "class"
+
     }
 }
