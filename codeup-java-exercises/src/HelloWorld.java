@@ -23,5 +23,10 @@ public class HelloWorld {
         x += 5;
         System.out.println(x);
 
+        int a = 3;
+        int b = 4;
+        b *= a;
+
+        System.out.println(b);
     }
 }
