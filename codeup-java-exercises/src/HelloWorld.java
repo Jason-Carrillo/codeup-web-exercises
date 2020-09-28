@@ -7,7 +7,7 @@ public class HelloWorld {
 
         System.out.println(myFavoriteNumber);
 
-        String myString = "T";
+        String myString = "3.14159";
 
         System.out.println(myString);
 
